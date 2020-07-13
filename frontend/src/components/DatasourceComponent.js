@@ -38,7 +38,6 @@ export class DatasourceComponent extends Component {
         this.save = this.save.bind(this);
         this.loadProblems = this.loadProblems.bind(this);
         this.listTables = this.listTables.bind(this);
-        this.listTables = this.listTables.bind(this);
         this.list = this.list.bind(this);
         this.load = this.load.bind(this);
         this.delete = this.delete.bind(this);

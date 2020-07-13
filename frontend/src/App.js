@@ -15,6 +15,7 @@ import './App.css';
 import {AppConfig} from "./AppConfig";
 import { ProblemComponent } from './components/ProblemComponent';
 import { DatasourceComponent } from './components/DatasourceComponent';
+import { TrainComponent } from './components/TrainComponent';
 
 class App extends Component {
 
@@ -237,7 +238,7 @@ class App extends Component {
 				items: [
 					{label: 'Problem Definition', icon: 'input', to: '/problem'},
 					{label: 'Model Definition', icon: 'grid_on', to: '/datasource'},
-					
+					{label: 'Train Model', icon: 'toys', to: '/train'},
 				]
 			}
 		];
@@ -271,6 +272,7 @@ class App extends Component {
 					<Route path="/" exact component={ProblemComponent} />
 					<Route path="/problem" component={ProblemComponent} />
 					<Route path="/datasource" component={DatasourceComponent} />
+					<Route path="/train" component={TrainComponent} />
 				</div>
 
 				<AppConfig topbarColor={this.state.topbarColor} horizontal={this.state.horizontal}

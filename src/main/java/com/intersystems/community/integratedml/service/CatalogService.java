@@ -1,6 +1,5 @@
 package com.intersystems.community.integratedml.service;
 
-import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -157,6 +156,38 @@ public class CatalogService {
 		}
 	
 	}
+	
+	@PostMapping(path = "/train-model")
+	public ResponseEntity<String> trainModel(@RequestParam Integer problemId, @RequestBody Datasource datasource) {
+		
+		Problem problem = em.createQuery("SELECT p FROM Problem p WHERE p.id = " + problemId, Problem.class)
+				.getSingleResult();
+
+		
+		Connection iris = getIrisConnection(problem);
+
+		try {
+			
+			String sql = "TRAIN MODEL " + datasource.getModelName() + " FROM " + datasource.getIrisSchema() + "." + datasource.getModelSource();
+			
+			Statement statement = iris.createStatement();  
+			statement.executeUpdate(sql);
+			
+			return ResponseEntity.ok("Model trained");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return ResponseEntity.badRequest().body(e.getMessage());
+		} finally {
+			try {
+				iris.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	
+	}
+
 
 	private Connection getIrisConnection(Problem problem) {
 
