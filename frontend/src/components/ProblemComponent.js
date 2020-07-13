@@ -104,7 +104,7 @@ export class ProblemComponent extends Component {
             <div className="p-grid p-fluid">
                 <Growl ref={(el) => this.growl = el}></Growl>
                 
-                <div className="p-col-12 p-lg-4">
+                <div className="p-col-12 p-lg-3">
                     <div className="card card-w-title datatable-demo">
                         <div className="card-title">Problem List</div>
                         <DataTable value={this.state.rows} selectionMode="single" paginator={true} rows={10}
@@ -115,7 +115,7 @@ export class ProblemComponent extends Component {
                     </div>
                 </div>
                 
-                <div className="p-col-12 p-lg-8">
+                <div className="p-col-12 p-lg-9">
                     <div className="card">
 
                         <div className="card-title">Define the problem</div>
