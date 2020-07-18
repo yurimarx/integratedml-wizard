@@ -23,6 +23,10 @@
 ## Use SAPPHIRE with Intersystems IntegratedML
 - Access http://localhost:8080 to access SAPPHIRE
 
+## Articles about Sapphire
+- To load data: https://community.intersystems.com/post/load-your-csv-intersystems-iris-using-sapphire-auto-ml-ui
+- To train model: https://community.intersystems.com/post/machine-learning-integratedml-and-sapphire
+
 ## YouTube vio
 - Link: https://youtu.be/PxVpEtjBAZM
 
