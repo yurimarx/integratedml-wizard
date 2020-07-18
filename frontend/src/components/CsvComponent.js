@@ -312,7 +312,7 @@ export class CsvComponent extends Component {
                                     <label>File to upload</label>
                                 </div>
                                 <div>
-                                    <FileUpload name="file[]" url={this.backend + "/upload"} onUpload={this.onUpload} multiple={true} accept="image/*" maxFileSize={1000000}>
+                                    <FileUpload name="file[]" url={this.backend + "/upload"} onUpload={this.onUpload} multiple={true} accept="text/*" maxFileSize={1000000}>
                                         {this.uploadedFiles.length &&
                                             <ul>
                                                 {this.uploadedFiles && this.uploadedFiles.map((file, index) => <li key={index}>{file.name} - {file.size} bytes</li>)}
