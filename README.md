@@ -27,6 +27,6 @@
 - To load data: https://community.intersystems.com/post/load-your-csv-intersystems-iris-using-sapphire-auto-ml-ui
 - To train model: https://community.intersystems.com/post/machine-learning-integratedml-and-sapphire
 
-## YouTube vio
+## YouTube video
 - Link: https://youtu.be/PxVpEtjBAZM
 
