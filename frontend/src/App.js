@@ -16,6 +16,7 @@ import {AppConfig} from "./AppConfig";
 import { ProblemComponent } from './components/ProblemComponent';
 import { DatasourceComponent } from './components/DatasourceComponent';
 import { TrainComponent } from './components/TrainComponent';
+import { CsvComponent } from './components/CsvComponent';
 
 class App extends Component {
 
@@ -234,6 +235,12 @@ class App extends Component {
 	createMenu() {
 		this.menu = [
 			{
+				label: 'Import', icon: 'content_copy',
+				items: [
+					{label: 'Load CSV', icon: 'content_copy', to: '/csv'}
+				]
+			},
+			{
 				label: 'AutoML', icon: 'list',
 				items: [
 					{label: 'Problem Definition', icon: 'input', to: '/problem'},
@@ -273,6 +280,7 @@ class App extends Component {
 					<Route path="/problem" component={ProblemComponent} />
 					<Route path="/datasource" component={DatasourceComponent} />
 					<Route path="/train" component={TrainComponent} />
+					<Route path="/csv" component={CsvComponent} />
 				</div>
 
 				<AppConfig topbarColor={this.state.topbarColor} horizontal={this.state.horizontal}
